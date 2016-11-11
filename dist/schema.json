@@ -1,0 +1,129 @@
+{
+ "swagger": "2.0",
+ "info": {
+  "version": "0.0.1",
+  "title": "api server"
+ },
+ "host": "localhost:9960",
+ "basePath": "/",
+ "schemes": [
+  "http"
+ ],
+ "consumes": [
+  "application/json"
+ ],
+ "produces": [
+  "application/json"
+ ],
+ "paths": {
+  "/api/v1/parsers": {
+   "get": {
+    "description": "Gets `GrabStore` objects.",
+    "operationId": "get-parser",
+    "parameters": [
+     {
+      "name": "name",
+      "in": "query",
+      "description": "The name of the person to whom to say hello",
+      "required": false,
+      "type": "string"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful response",
+      "schema": {
+       "type": "object",
+       "required": [
+        "results"
+       ],
+       "properties": {
+        "success": {
+         "type": "string"
+        },
+        "results": {
+         "type": "array",
+         "items": {
+          "$ref": "#/definitions/GrabStore"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/swagger": {
+   "x-swagger-pipe": "swagger_raw"
+  }
+ },
+ "definitions": {
+  "GrabStore": {
+   "type": "object",
+   "properties": {
+    "sku": {
+     "type": "string"
+    },
+    "amount": {
+     "type": "integer"
+    },
+    "mfs": {
+     "type": "string"
+    },
+    "pn": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "lead": {
+     "type": "boolean"
+    },
+    "rohs": {
+     "type": "boolean"
+    },
+    "url": {
+     "type": "string"
+    },
+    "ip": {
+     "type": "string"
+    },
+    "uuid": {
+     "type": "string"
+    },
+    "attributes": {
+     "type": "array",
+     "items": {
+      "properties": {
+       "key": {
+        "type": "string"
+       },
+       "value": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "documents": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "priceStores": {
+     "type": "array",
+     "items": {
+      "properties": {
+       "amount": {
+        "type": "integer"
+       },
+       "unitPrice": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
