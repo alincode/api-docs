@@ -1,5 +1,16 @@
 # Swagger UI
 
+**Video**
+
+[Swagger: How to Create an API Documentation](https://www.youtube.com/watch?v=xggucT_xl5U)
+
+**commend**
+
+```
+npm run build
+npm run serve
+```
+
 [![Build Status](https://travis-ci.org/swagger-api/swagger-ui.svg?branch=master)](https://travis-ci.org/swagger-api/swagger-ui)
 [![NPM version](https://badge.fury.io/js/swagger-ui.svg)](http://badge.fury.io/js/swagger-ui)
 
